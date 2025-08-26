@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 
 # Load dataset
-df = pd.read_csv(r"C:\Users\Srradha\Downloads\house_prices.csv")
+df = pd.read_csv("house_prices.csv")
 
 
 # Select relevant columns
@@ -30,4 +30,5 @@ if st.button("Predict Price"):
     features = [[bedrooms, bathrooms, sqft_living]]
     predicted_price = model.predict(features)[0]
     st.success(f"💰 Estimated House Price: ${predicted_price:,.2f}")
+
  
